@@ -1,0 +1,11 @@
+Watch out -- Ignore lines that contain text!
+29.3423
+23.1544913425
+4
+36.5
+Oh No, Bad Line!
+79.5074638
+3
+76.451
+Oh No Again!
+84.52
