@@ -3,8 +3,9 @@ import pygame
 pygame.init()
 screen = pygame.display.set_mode((640, 480))
 
+
 class Box(pygame.sprite.Sprite):
-    '''Our Box class inherits from the Sprite class'''
+    """Our Box class inherits from the Sprite class"""
     def __init__(self):
         # Call the parent __init__() method
         pygame.sprite.Sprite.__init__(self)
@@ -27,7 +28,7 @@ class Box(pygame.sprite.Sprite):
 
             
 def main():
-    '''This function defines the 'mainline logic' for our game.'''
+    """This function defines the 'mainline logic' for our game."""
     
     # Display
     pygame.display.set_caption("Basic Sprite Demo")

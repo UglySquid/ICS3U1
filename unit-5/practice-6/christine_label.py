@@ -1,7 +1,11 @@
-# Demo #2b: Label Sprite Demo
+"""
+Author: Christine Wei
+Date: May 16, 2023,
+Description: Sprites library
+"""
 
 # I - Import and Initialize
-import mySprites
+import newSprites
 import pygame
 
 pygame.init()
@@ -19,9 +23,9 @@ def main():
     background.fill((255, 255, 255))
     screen.blit(background, (0, 0))
 
-    label1 = mySprites.Label("Hi. I'm a label.", (100, 100))
-    label2 = mySprites.Label("I'm another label.", (400, 400))
-    labelEvent = mySprites.Label("", (320, 200))
+    label1 = newSprites.Label("Hi. I'm a label.", (100, 100), (255, 0, 255), "comicsansms", 72)
+    label2 = newSprites.Label("I'm another label.", (400, 400), (0, 255, 255), "comicsansms", 72)
+    labelEvent = newSprites.Label("", (320, 200), (255, 0, 0), "Helvetica", 32)
 
     allSprites = pygame.sprite.Group(label1, label2, labelEvent)
 

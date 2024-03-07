@@ -1,5 +1,5 @@
 """
-animal_type: Christine Wei
+Author: Christine Wei
 Date: May 1, 2023,
 Description: GUI program that converts Celsius temperatures to Fahrenheit temperatures.
 """
@@ -37,14 +37,19 @@ class TempGUI:
         self.calc_button.pack(side='left')
         self.quit_button.pack(side='left')
 
+        # Enter the tkinter main loop.
+        tkinter.mainloop()
+
     def convert(self):
-        # Get the value entered by the user into the
-        # kilo_entry widget.
+        # Get the value entered by the user into the celsius_entry widget.
         celsius = float(self.celsius_entry.get())
-        # Convert kilometres to miles.
-        farenheit = (9/5)celsius+32
+
+        # Convert celsius to fahrenheit
+        fahrenheit = celsius*(9/5) + 32
+
         # Display the results in an info dialogue box.
-        tkinter.messagebox.showinfo('Results', str(kilo) + ' kilometers is equal to ' + str(miles) + ' miles.')
+        tkinter.messagebox.showinfo("Results",
+                                    f"Results: {str(celsius)} celsius is equal to {str(fahrenheit)} fahrenheit.")
 
 
 def main():

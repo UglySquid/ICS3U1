@@ -60,6 +60,7 @@ box_blue_y = screen.get_height()/2
 # Assign
 clock = pygame.time.Clock()
 keepGoing = True
+
 # Loop
 while keepGoing:
     # Time

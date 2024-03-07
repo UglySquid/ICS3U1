@@ -1,7 +1,11 @@
-# Demo #3b: Bricks Image Sprite Demo
+"""
+Author: Christine Wei
+Date: May 16, 2023,
+Description: Bricks Image Sprite
+"""
 
 # I - Import and Initialize
-import mySprites
+import newSprites
 import pygame
 
 pygame.init()
@@ -22,7 +26,7 @@ def main():
     # Create 10 random bricks
     bricks = []
     for i in range(10):
-        bricks.append(mySprites.Brick(screen))
+        bricks.append(newSprites.Brick(screen))
 
     allSprites = pygame.sprite.Group(bricks)
 

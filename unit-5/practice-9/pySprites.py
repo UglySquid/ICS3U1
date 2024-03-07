@@ -13,6 +13,7 @@ class Ball(pygame.sprite.Sprite):
 
         # Set the image and rect attributes for the Ball
         self.image = pygame.image.load("ball.png")
+        self.image.set_colorkey((0, 0, 0))
         self.image = pygame.transform.scale(self.image, (100, 100))
 
         self.rect = self.image.get_rect()
@@ -62,10 +63,12 @@ class Player(pygame.sprite.Sprite):
         # Define the image attributes for a black rectangle.
         if player_num == 1:
             self.image = pygame.image.load("hand-left.png")
+            self.image.set_colorkey((0, 0, 0))
             self.image = pygame.transform.scale(self.image, (60, 150))
             self.rect = self.image.get_rect()
         else:
             self.image = pygame.image.load("hand-right.png")
+            self.image.set_colorkey((0, 0, 0))
             self.image = pygame.transform.scale(self.image, (60, 150))
             self.rect = self.image.get_rect()
 
@@ -102,16 +105,17 @@ class EndZone(pygame.sprite.Sprite):
     '''This class defines the sprite for our left and right end zones'''
 
     def __init__(self, screen, x_position):
-        '''This initializer takes a screen surface, and x position as
-    parameters. For the left (player 1) endzone, x_position will = 0, 
-    and for the right (player 2) endzone, x_position will = 639.'''
+        """This initializer takes a screen surface, and x position as
+        parameters. For the left (player 1) endzone, x_position will = 0,
+        and for the right (player 2) endzone, x_position will = 639."""
+
         # Call the parent __init__() method
         pygame.sprite.Sprite.__init__(self)
 
         # Our end zone sprite will be a 1 pixel wide black line.
         self.image = pygame.Surface((1, screen.get_height()))
         self.image = self.image.convert()
-        self.image.fill((0, 0, 0))
+        self.image.set_colorkey((0, 0, 0))
 
         # Set the rect attributes for the end zone
         self.rect = self.image.get_rect()
@@ -156,5 +160,6 @@ class ScoreKeeper(pygame.sprite.Sprite):
 
         message = "Player 1: %d vs. Player 2: %d" % (self.__player1_score, self.__player2_score)
         self.image = self.__font.render(message, 1, (0, 0, 0))
+        self.image.set_colorkey((0, 0, 0))
         self.rect = self.image.get_rect()
         self.rect.center = (320, 15)
